@@ -2,38 +2,65 @@
 <html>
 <style>
 .btn-group button {
-    background-color: #4CAF50; /* Green background */
-    border: 1px solid green; /* Green border */
-    color: white; /* White text */
-    padding: 10px 24px; /* Some padding */
-    cursor: pointer; /* Pointer/hand icon */
-    float: left; /* Float the buttons side by side */
+    background-color: #0099cc; 
+    border: 1px solid green; 
+    color: white; 
+    padding: 10px 24px; 
+    cursor: pointer; 
+    float: left; 
 }
-
 /* Clear floats (clearfix hack) */
 .btn-group:after {
     content: "";
     clear: both;
     display: table;
 }
-
 .btn-group button:not(:last-child) {
     border-right: none; /* Prevent double borders */
 }
-
 /* Add a background color on hover */
 .btn-group button:hover {
-    background-color: #3e8e41;
+    background-color: #00bfff;
 }
 </style>
 <body>
 
 <div class="btn-group" style="width:100%">
-  <button style="width:25%">Apple</button>
-  <button style="width:25%">Samsung</button>
-  <button style="width:25%">Sony</button>
-  <button style="width:25%">HTC</button>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-container">  
+  
+
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-animate-zoom">
+      <header class="w3-container w3-teal"> 
+         <span onclick="document.getElementById('id01').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Image Upload</h2>
+      </header>
+      <div class="w3-container">
+        <p>Choose a file</p>
+        <p>Enter</p>
+      </div>
+      <footer class="w3-container w3-teal">
+        <p>Modal Footer</p>
+      </footer>
+    </div>
+  </div>
 </div>
+          
+</body>
+</html>
+  <button style="width:25%" onclick="document.getElementById('id01').style.display='block'" class="btn-   
+  group">Upload an image</button>
+  <button style="width:25%">Print an immage</button>
+  <button style="width:25%">Send an Image</button>
+  <button style="width:25%">Log off</button>
+</div>
+
+
 
 </body>
 </html>
@@ -44,42 +71,35 @@
 * {
     box-sizing: border-box;
 }
-
 body {
     margin: 0;
     font-family: Arial;
 }
-
 /* The grid: Four equal columns that floats next to each other */
 .column {
     float: left;
     width: 25%;
     padding: 5px;
 }
-
 /* Style the images inside the grid */
 .column img {
     opacity: 0.8; 
     cursor: pointer; 
 }
-
 .column img:hover {
     opacity: 1;
 }
-
 /* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
-
 /* The expanding image container */
 .container {
     position: relative;
     display: none;
 }
-
 /* Expanding image text */
 #imgtext {
     position: absolute;
@@ -88,7 +108,6 @@ body {
     color: white;
     font-size: 20px;
 }
-
 /* Closable button inside the expanded image */
 .closebtn {
     position: absolute;
